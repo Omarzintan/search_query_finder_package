@@ -2,27 +2,37 @@
 
 General rule-based function that extracts a search query from spoken text given search terms to look out for.
 
-Some possible search terms include 'to', 'on', 'for', 'about'
+Some possible search terms include `'to', 'on', 'for', 'about'`
+```
 e.g. 'do a google search on Python.'
     search term = on
     query found = Python
+```
 
-This function also ignores false search_term_indicators such as 'like to', 'love to', 'want to'
+This function also ignores false search_term_indicators such as `'like to', 'love to', 'want to'`
+```
 e.g. 'I want to do a google search on Python'
      false search term = to
      false search term indicator = want
      actual search term = on
      query found = Python
+```
 
-  Thus the function will correctly ignore 'do a google search on Python' as a possible search query and will capture 'Python' as the right query.
+  Thus, in the above example, the function will correctly ignore `'do a google search on Python'` as a possible search query and will capture `'Python'` as the right query.
 
- Other exmaples of use cases: 'Send an email to Alex'
+ Other exmaples of use cases:
+ ```
+'Send an email to Alex'
    search term = to
    query found = Alex
+```
 
+```
  Arguments: <string> spoken_text, <list> feature_patterns=[],
             <list> search_terms=['to', 'on', 'for', 'search'], <list> false_search_term_indicators=['like', 'love', 'want', 'ready']
 Return type: <string> spoken_text (now stripped down to only the search query.)
+```
+
 ## Installation
 ```bash
 pip install search_query_finder
