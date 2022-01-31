@@ -1,0 +1,10 @@
+# These files don't get pushed to GitHub
+__pycache__
+*~
+*#
+**#
+*.pyc
+.DS_Store
+*.whl
+*.gz
+*.egg-info
